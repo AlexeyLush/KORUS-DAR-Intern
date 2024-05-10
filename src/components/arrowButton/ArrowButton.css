@@ -1,0 +1,8 @@
+.arrow {
+    transition: .3s;
+}
+
+.arrow:hover {
+    cursor: pointer;
+    opacity: 0.6;
+}
