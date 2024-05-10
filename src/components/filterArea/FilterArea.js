@@ -1,4 +1,5 @@
 import "./FilterArea.css"
+import Select from "../select/Select";
 
 function FilterArea() {
 
@@ -23,8 +24,9 @@ function FilterArea() {
                     </p>
                 </div>
             </div>
-            <div className="filter-area__input_form block__margin_bottom_big">
-
+            <div className="filter-area__input_form block__margin_top_big block__margin_bottom_big">
+                <Select label={"Кухня"} options={["1","2","3","4","5","6"]} defaultOption={"Все страны и регионы"}/>
+                <Select label={"Тип блюда"} options={["1","2","3","4","5","6"]} defaultOption={"Все страны и регионы"}/>
             </div>
         </div>
     );
