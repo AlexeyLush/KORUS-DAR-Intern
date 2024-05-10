@@ -23,7 +23,9 @@
 }
 
 .filter-area__input_form {
-    height: 50px;
     width: 100%;
-    background-color: black;
+}
+
+.select_input {
+    margin-top: 17.33px;
 }
