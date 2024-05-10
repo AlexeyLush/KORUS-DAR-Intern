@@ -1,5 +1,5 @@
 import './ArrowButton.css'
-import leftArrow from "../../images/svg/left_arrow.svg"
+import leftArrow from "../images/svg/left_arrow.svg"
 
 function ArrowButton() {
 
