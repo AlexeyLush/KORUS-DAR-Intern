@@ -1,14 +1,15 @@
 import './App.css';
-import {Routes} from "react-router-dom";
+import {Route, Routes} from "react-router-dom";
 import Header from "../header/Header";
+import Home from "../../pages/home/Home";
 
 function App() {
   return (
     <>
-      <div className="block__padding_horizontal block__padding_vertical">
-        <Header title={"Сборник рецептов из разных стран мира"} isHomeReturn={true}/>
+      <div className="block__padding_horizontal_small block__padding_vertical_small">
+        <Header title={"Сборник рецептов из разных стран мира"}/>
         <Routes>
-          {/*<Route exact path="/" element={<Home/>}/>*/}
+          <Route exact path="/" element={<Home/>}/>
           {/*/!*<Route path="/products" element={<Products/>}/>*!/*/}
           {/*<Route path="/catalog/:product_type/:id" element={<ProductPage/>}/>*/}
           {/*<Route path="/catalog/:product_type" element={<Products/>}/>*/}
