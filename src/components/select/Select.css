@@ -1,0 +1,116 @@
+.select_input {
+    display: flex;
+    align-items: center;
+    justify-content: right;
+}
+.select-box {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    min-width: 285px;
+    width: 100%;
+
+}
+.select_input__label {
+    text-align: right;
+    font-size: 16px;
+    font-weight: 700;
+    width: 100%;
+}
+
+.select-box .select-box-container {
+    position: absolute;
+    background: white;
+    max-height: 0;
+    width: 100%;
+    opacity: 0;
+    transition: all 0.3s;
+    border-radius: 2px;
+    overflow: hidden;
+    top: 50px;
+    border: 1px solid rgb(128, 128, 128);
+    font-size: 14px;
+    order: 1;
+}
+
+.selected {
+    background: white;
+    border-radius: 2px;
+    position: relative;
+    font-size: 14px;
+    border: 1px solid rgb(128, 128, 128);
+    order: 0;
+}
+
+.selected::after {
+    content: "";
+    background: url("../../images/svg/select_arrow.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    position: absolute;
+    height: 100%;
+    width: 32px;
+    right: 10px;
+    top: 2px;
+
+    transition: all 0.3s;
+}
+
+.select-box .select-box-container.active {
+    max-height: 240px;
+    opacity: 1;
+    overflow-y: scroll;
+
+    z-index: 99999;
+}
+
+.select-box .select-box-container.active + .selected::after {
+    transform: rotateX(180deg);
+    top: -3px;
+}
+
+.select-box .select-box-container::-webkit-scrollbar {
+    width: 8px;
+    background: rgba(30, 30, 30, 0.3);
+    border-radius: 0 2px 2px 0;
+}
+
+.select-box .select-box-container::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 0 2px 2px 0;
+}
+
+.select-box .selected {
+    height: 100%;
+    min-height: 38px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+
+    padding-left: 15px;
+}
+
+.select-box .select-option {
+
+    min-height: 32px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+
+    padding-left: 15px;
+    transition: .2s;
+
+}
+
+.select-box .select-option:hover {
+    background: #F5F5F5;
+}
+
+.select-box label {
+    cursor: pointer;
+}
+
+.select-box .select-option .radio {
+    display: none;
+}
