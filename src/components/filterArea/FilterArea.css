@@ -1,0 +1,29 @@
+.filter-area {
+    min-height: 500px;
+    width: 465px;
+    background-color: white;
+}
+
+.placeholder_image {
+    width: 369px;
+    height: 160px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.header__description {
+    font-size: 14px;
+}
+
+.header__description p {
+    line-height: 18px;
+    margin-top: 24px;
+    font-weight: 400;
+}
+
+.filter-area__input_form {
+    height: 50px;
+    width: 100%;
+    background-color: black;
+}
