@@ -70,3 +70,36 @@ textarea:not([rows]) {
 :target {
   scroll-margin-block: 5ex;
 }
+/* --------------------------------------------------------------------------------------------- */
+* {
+  font-family: Roboto, sans-serif;
+}
+
+:root {
+  --black-opacity-color: rgba(0,0,0,0.85);
+}
+
+
+body {
+  background-color: #EFEFEF;
+}
+
+.block__padding_top {
+  padding-top: 12px;
+}
+
+.block__padding_bottom {
+  padding-bottom: 12px;
+}
+
+.block__padding_horizontal {
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+.block__padding_vertical {
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+
