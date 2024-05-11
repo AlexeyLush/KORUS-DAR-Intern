@@ -18,7 +18,7 @@
 
 .header__description p {
     line-height: 18px;
-    margin-top: 24px;
+    margin-top: 18px;
     font-weight: 400;
 }
 
@@ -31,8 +31,8 @@
 }
 
 .input_form__reset_filters {
-
     color: var(--primary-color);
+    opacity: 50%;
     font-size: 14px;
     transition: .2s;
     width: fit-content;
@@ -44,5 +44,5 @@
 
 .input_form__reset_filters:hover {
     cursor: pointer;
-    opacity: 50%;
+    opacity: 100%;
 }
