@@ -2,18 +2,11 @@ import "./Select.css"
 import {useState} from "react";
 import classNames from "classnames";
 
-function Select({label, options, defaultOption}) {
+function Select({label, options, onChange, valueSubscribe}) {
 
     const [toggleSelect, setToggleSelect] = useState(false);
-    const [selectedOption, setSelectedOption] = useState(defaultOption);
-
-
-    function processDefaultOption() {
-        return defaultOption !== undefined
-    }
 
     function chosenOption(option) {
-        setSelectedOption(option)
         setToggleSelect(false)
     }
 
@@ -32,19 +25,18 @@ function Select({label, options, defaultOption}) {
           <div className="select-box">
               <div onMouseLeave={() => setToggleSelect(false)}  className={selectClassList}>
                   {
-                      processDefaultOption() && <div onClick={() => chosenOption(defaultOption)}
-                                                     className="select-option"><label>{defaultOption}</label></div>
-                  }
-                  {
                       options.map((option, i) =>
-                          <div onClick={() => chosenOption(option)}
+                          <div onClick={() => {
+                              chosenOption(option)
+                              onChange(option)
+                          }}
                                key={i} className="select-option"><label>{option}</label></div>
                       )
                   }
               </div>
 
               <div onClick={() => setToggleSelect(!toggleSelect)} className="selected">
-                  {selectedOption}
+                  {valueSubscribe}
               </div>
 
           </div>
