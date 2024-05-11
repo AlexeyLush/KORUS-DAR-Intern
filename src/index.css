@@ -71,12 +71,21 @@ textarea:not([rows]) {
   scroll-margin-block: 5ex;
 }
 /* --------------------------------------------------------------------------------------------- */
+
+@font-face {
+  font-family: "Roboto";
+  src:
+          url("./fonts/Roboto-Regular.ttf") format("truetype")
+}
+
 * {
-  font-family: Roboto, sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 :root {
   --black-opacity-color: rgba(0,0,0,0.85);
+  --primary-color: #1890FF;
+  --radio-button-border-color-choose: #D9D9D9;
 }
 
 
