@@ -1,12 +1,14 @@
 .radio_buttons__container {
     display: flex;
     justify-content: right;
+    align-items: center;
 }
 .radio_button__label {
     text-align: right;
     font-size: 16px;
     font-weight: 700;
     width: 100%;
+    line-height: 24px;
 }
 
 .radio_buttons {
