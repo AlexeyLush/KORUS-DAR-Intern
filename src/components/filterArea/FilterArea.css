@@ -26,6 +26,23 @@
     width: 100%;
 }
 
-.select_input {
+.select_input, .radio_buttons__container, .input_form__reset_filters {
     margin-top: 17.33px;
+}
+
+.input_form__reset_filters {
+
+    color: var(--primary-color);
+    font-size: 14px;
+    transition: .2s;
+    width: fit-content;
+    user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+}
+
+.input_form__reset_filters:hover {
+    cursor: pointer;
+    opacity: 50%;
 }
