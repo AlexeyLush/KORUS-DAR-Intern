@@ -1,7 +1,18 @@
 import "./FilterArea.css"
 import Select from "../select/Select";
+import SelectRadioButtons from "../selectRadioButtons/SelectRadioButtons";
+import {useContext} from "react";
+import {RecipesContext} from "../../contexts/RecipesContext";
+
+/*
+* кухня: []
+* тип блюда: []
+* */
 
 function FilterArea() {
+
+    let {difficulties, difficulty, tags, mealTypes, tag, mealType, changeTag, changeMealType, resetFilters}
+        = useContext(RecipesContext);
 
     return (
         <div className="filter-area block__padding_horizontal_big block__padding_vertical_big block__margin_top_small">
@@ -25,8 +36,37 @@ function FilterArea() {
                 </div>
             </div>
             <div className="filter-area__input_form block__margin_top_big block__margin_bottom_big">
-                <Select label={"Кухня"} options={["1","2","3","4","5","6"]} defaultOption={"Все страны и регионы"}/>
-                <Select label={"Тип блюда"} options={["1","2","3","4","5","6"]} defaultOption={"Все страны и регионы"}/>
+                <Select onChange={changeTag} label={"Кухня"} options={[...tags]} valueSubscribe={tag}/>
+                <Select onChange={changeMealType} label={"Тип блюда"} options={[...mealTypes]} valueSubscribe={mealType}/>
+                <SelectRadioButtons defaultButton={difficulty} name={"difficulty"} label={"Сложность приготовления"} buttons={
+                    [
+                        {
+                            "value": "all",
+                            "title" : difficulties["all"],
+                            "disabled" : false
+                        },
+                        {
+                            "value": "easy",
+                            "title" : difficulties["easy"],
+                            "disabled" : false
+                        },
+                        {
+                            "value": "medium",
+                            "title" : difficulties["medium"],
+                            "disabled" : false
+                        },
+                        {
+                            "value": "hard",
+                            "title" : difficulties["hard"],
+                            "disabled" : false
+                        }
+
+                    ]
+                }/>
+                <p onClick={() => resetFilters()} className="input_form__reset_filters">Сбросить все фильтры</p>
+            </div>
+            <div>
+                
             </div>
         </div>
     );
