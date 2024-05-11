@@ -144,3 +144,7 @@ body {
 .block__margin_bottom_big {
   margin-bottom: 24px;
 }
+
+.block__margin_top_large {
+  margin-top: 48px;
+}
