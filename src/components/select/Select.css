@@ -16,6 +16,7 @@
     font-size: 16px;
     font-weight: 700;
     width: 100%;
+    line-height: 24px;
 }
 
 .select-box .select-box-container {
@@ -28,7 +29,7 @@
     border-radius: 2px;
     overflow: hidden;
     top: 50px;
-    border: 1px solid rgb(128, 128, 128);
+    border: 1px solid var(--radio-button-border-color-choose);
     font-size: 14px;
     order: 1;
 }
@@ -38,7 +39,7 @@
     border-radius: 2px;
     position: relative;
     font-size: 14px;
-    border: 1px solid rgb(128, 128, 128);
+    border: 1px solid var(--radio-button-border-color-choose);
     order: 0;
 }
 
