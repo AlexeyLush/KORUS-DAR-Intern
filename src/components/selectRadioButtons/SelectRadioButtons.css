@@ -1,0 +1,47 @@
+.radio_buttons__container {
+    display: flex;
+    justify-content: right;
+}
+.radio_button__label {
+    text-align: right;
+    font-size: 16px;
+    font-weight: 700;
+    width: 100%;
+}
+
+.radio_buttons {
+
+    display: flex;
+    width: 100%;
+    min-width: 285px;
+}
+
+.radio_buttons .radio_container {
+    flex: 1;
+}
+
+/*.radio_buttons .radio_container:not(.disabled) .radio-button{*/
+/*    border-bottom-left-radius: 2px;*/
+/*    border-top-left-radius: 2px;*/
+/*}*/
+
+/*.radio_buttons .radio_container:not(.disabled) ~ .radio_container:not(.disabled) .radio-button {*/
+/*    border-bottom-left-radius: 0;*/
+/*    border-top-left-radius: 0;*/
+/*}*/
+
+
+.radio_container:first-child .radio-button{
+    border-bottom-left-radius: 2px;
+    border-top-left-radius: 2px;
+}
+
+.radio_container:last-child .radio-button{
+    border-right: 1px solid var(--radio-button-border-color-choose);
+    border-bottom-right-radius: 2px;
+    border-top-right-radius: 2px;
+}
+
+.radio_buttons .radio_container:not(.disabled) ~ .radio-button{
+    background-color: red;
+}
