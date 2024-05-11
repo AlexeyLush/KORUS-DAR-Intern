@@ -3,6 +3,7 @@ import Select from "../select/Select";
 import SelectRadioButtons from "../selectRadioButtons/SelectRadioButtons";
 import {useContext} from "react";
 import {RecipesContext} from "../../contexts/RecipesContext";
+import Additional from "../additional/Additional";
 
 /*
 * кухня: []
@@ -65,9 +66,7 @@ function FilterArea() {
                 }/>
                 <p onClick={() => resetFilters()} className="input_form__reset_filters">Сбросить все фильтры</p>
             </div>
-            <div>
-                
-            </div>
+            <Additional/>
         </div>
     );
 
