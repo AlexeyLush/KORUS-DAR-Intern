@@ -86,6 +86,7 @@ textarea:not([rows]) {
   --black-opacity-color: rgba(0,0,0,0.85);
   --primary-color: #1890FF;
   --radio-button-border-color-choose: #D9D9D9;
+  --border-color-recipe: #F0F0F0;
 }
 
 
@@ -117,6 +118,18 @@ body {
 
 .block__margin_right_small {
   margin-right: 12px;
+}
+
+.block__margin_left_small {
+  margin-left: 12px;
+}
+
+.block__margin_bottom_small {
+  margin-bottom: 12px;
+}
+
+.block__margin_small {
+  margin: 12px;
 }
 
 .block__padding_top_big{
