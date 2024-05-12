@@ -1,6 +1,5 @@
-import {createContext, useContext, useEffect, useState} from "react";
+import {createContext, useEffect, useState} from "react";
 import {cuisineCollection, difficultiesCollection, getAllRecipes} from "../services/api/ApiService";
-import {SpinnerContext} from "./SpinnerContext";
 
 export const RecipesContext = createContext(null);
 
