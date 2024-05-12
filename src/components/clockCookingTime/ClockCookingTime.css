@@ -1,0 +1,10 @@
+.clock_cooking {
+    display: flex;
+    align-items: center;
+}
+
+.time_of_cooking {
+    font-size: 12px;
+    margin-left: 6px;
+    color: rgba(0, 0, 0, 0.85);
+}
