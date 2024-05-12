@@ -1,0 +1,55 @@
+.list-area {
+    min-height: 100%;
+    width: 100%;
+}
+
+.list-area__content {
+
+    height: 100%;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.5);
+
+}
+
+.list-area__header {
+
+    display: flex;
+    align-items: center;
+    height: 56px;
+    background-color: white;
+    border-bottom: 1px solid #F0F0F0;
+
+}
+
+.list-area__header .header__title {
+
+    font-size: 20px;
+    width: fit-content;
+}
+
+.list-area__header .header__count {
+    color: rgba(0, 0, 0, 0.45);
+    font-size: 14px;
+}
+
+@media only screen and (max-width: 785px) {
+    .list-area__header .header__count {
+        display: none;
+    }
+
+}
+
+@media only screen and (max-width: 767px) {
+    .list-area__header .header__count {
+        display: block;
+    }
+
+}
+
+.recipes {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 4px;
+    justify-content: center;
+    margin-right: 6px;
+}
