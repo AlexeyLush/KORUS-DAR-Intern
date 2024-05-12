@@ -6,7 +6,7 @@ function Select({label, options, onChange, valueSubscribe}) {
 
     const [toggleSelect, setToggleSelect] = useState(false);
 
-    function chosenOption(option) {
+    function chosenOption() {
         setToggleSelect(false)
     }
 

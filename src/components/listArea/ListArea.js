@@ -1,8 +1,9 @@
 import "./ListArea.css"
 import RecipeCard from "../recipeCard/RecipeCard";
-import {useContext} from "react";
+import {useContext, useEffect} from "react";
 import {RecipesContext} from "../../contexts/RecipesContext";
 import Paginator from "../paginator/Paginator";
+import {SpinnerContext} from "../../contexts/SpinnerContext";
 
 function ListArea() {
 

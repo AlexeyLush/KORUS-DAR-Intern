@@ -1,5 +1,6 @@
-import {createContext, useEffect, useState} from "react";
+import {createContext, useContext, useEffect, useState} from "react";
 import {cuisineCollection, difficultiesCollection, getAllRecipes} from "../services/api/ApiService";
+import {SpinnerContext} from "./SpinnerContext";
 
 export const RecipesContext = createContext(null);
 
@@ -43,6 +44,8 @@ export function RecipesProvider({children}) {
     const [totalPages, setTotalPages] = useState(1);
 
     let [allRecipesStorage, setAllRecipesStorage] = useState([]);
+
+
 
     useEffect(() => {
         let response = getAllRecipes();
