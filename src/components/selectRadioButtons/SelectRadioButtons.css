@@ -47,3 +47,16 @@
 .radio_buttons .radio_container:not(.disabled) ~ .radio-button{
     background-color: red;
 }
+
+
+@media only screen and (max-width: 767px) {
+    .radio_buttons__container{
+        flex-direction: column;
+    }
+    .radio_button__label {
+        text-align: left;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+}

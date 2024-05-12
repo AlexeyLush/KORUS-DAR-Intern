@@ -58,8 +58,11 @@
     transition: all 0.3s;
 }
 
+@keyframes close_select {
+}
+
 .select-box .select-box-container.active {
-    max-height: 240px;
+    max-height: 190px;
     opacity: 1;
     overflow-y: scroll;
 
@@ -114,4 +117,16 @@
 
 .select-box .select-option .radio {
     display: none;
+}
+
+@media only screen and (max-width: 767px) {
+    .select_input{
+        flex-direction: column;
+    }
+    .select_input__label {
+        text-align: left;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
 }

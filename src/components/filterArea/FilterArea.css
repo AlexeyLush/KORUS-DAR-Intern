@@ -1,15 +1,21 @@
 .filter-area {
-    min-height: 500px;
+    min-height: 100%;
     width: 465px;
     background-color: white;
 }
 
+.filter-area__sticky {
+    position: sticky;
+    top: 0;
+}
+
 .placeholder_image {
-    width: 369px;
+    max-width: 369px;
     height: 160px;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    margin: 0 auto;
 }
 
 .header__description {
@@ -45,4 +51,11 @@
 .input_form__reset_filters:hover {
     cursor: pointer;
     opacity: 100%;
+}
+
+@media only screen and (max-width: 767px) {
+    .filter-area{
+        width: 100%;
+    }
+
 }
