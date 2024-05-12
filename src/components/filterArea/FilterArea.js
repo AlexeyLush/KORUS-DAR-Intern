@@ -1,23 +1,61 @@
 import "./FilterArea.css"
 import Select from "../select/Select";
 import SelectRadioButtons from "../selectRadioButtons/SelectRadioButtons";
-import {useContext} from "react";
+import {useContext, useEffect} from "react";
 import {RecipesContext} from "../../contexts/RecipesContext";
 import Additional from "../additional/Additional";
-
-/*
-* кухня: []
-* тип блюда: []
-* */
+import {useLocation} from "react-router-dom";
 
 function FilterArea() {
 
-    let {difficulties, difficulty, tags, mealTypes, tag, mealType, changeTag, changeMealType, resetFilters}
+    const location = useLocation();
+    const searchParams = new URLSearchParams(location.search);
+
+
+    useEffect(() => {
+        if (searchParams.get('difficulty') !== null) {
+            changeDifficulty(searchParams.get('difficulty'))
+        }
+        if (searchParams.get('meal-type') !== null) {
+            changeMealType(searchParams.get('meal-type'))
+        }
+        if (searchParams.get('cuisine') !== null) {
+            changeCuisine(searchParams.get('cuisine'))
+        }
+        if (searchParams.get('page') !== null) {
+            changeCurrentPage(parseInt(searchParams.get('page')))
+        }
+    }, []);
+
+
+    let {difficulties, difficulty, cuisines, mealTypes, cuisine, currentPage, mealType, changeCuisine, changeMealType, resetFilters
+        ,changeDifficulty, changeCurrentPage, }
         = useContext(RecipesContext);
+
+    useEffect(() => {
+        searchParams.set("difficulty", difficulty)
+    }, [difficulty]);
+
+    useEffect(() => {
+        searchParams.set("cuisine", cuisine)
+    }, [cuisine]);
+
+    useEffect(() => {
+        searchParams.set("meal-type", mealType)
+    }, [mealType]);
+
+    useEffect(() => {
+        searchParams.set("page", currentPage)
+    }, [currentPage]);
+
+
+
+
 
     return (
         <div className="filter-area block__padding_horizontal_big block__padding_vertical_big block__margin_top_small">
             <div className="filter-area__sticky">
+
                 <div className="filter-area__header block__padding_horizontal_big block__padding_vertical_big">
                     <div className="placeholder_image"
                          style={{backgroundImage: `url('/images/pictures/placeholder_image.png')`}}>
@@ -42,7 +80,7 @@ function FilterArea() {
                     </div>
                 </div>
                 <div className="filter-area__input_form block__margin_top_big block__margin_bottom_big">
-                    <Select onChange={changeTag} label={"Кухня"} options={[...tags]} valueSubscribe={tag}/>
+                    <Select onChange={changeCuisine} label={"Кухня"} options={[...cuisines]} valueSubscribe={cuisine}/>
                     <Select onChange={changeMealType} label={"Тип блюда"} options={[...mealTypes]}
                             valueSubscribe={mealType}/>
                     <SelectRadioButtons defaultButton={difficulty} name={"difficulty"} label={"Сложность приготовления"}

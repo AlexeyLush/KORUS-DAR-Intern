@@ -4,6 +4,7 @@ import classNames from "classnames";
 
 function Header({title, isHomeReturn}) {
 
+
     function processTitle() {
         return title !== undefined ? title : ""
     }

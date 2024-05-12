@@ -4,8 +4,11 @@
 }
 
 .list-area__content {
-
-    height: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100%;
     width: 100%;
     background-color: rgba(255, 255, 255, 0.5);
 
